@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Ejercicio3 {
@@ -35,22 +34,22 @@ public class Ejercicio3 {
             System.out.println("0. Salir\n");
             option = sc.nextInt();
 
-            if(option == 1) {
-                System.out.println("Ingrese la cantidad de entradas GENERAL a comprar: ");
+            if (option == 1) {
+                System.out.println("Ingrese la cantidad de entradas " + typeTicketOne + " a comprar: ");
                 amountProductOne = sc.nextInt();
-                System.out.println("Ingrese la cantidad de entradas VIP a comprar: ");
+                System.out.println("Ingrese la cantidad de entradas " + typeTicketTwo + " a comprar: ");
                 amountProductTwo = sc.nextInt();
-                System.out.println("Ingrese la cantidad de entradas INFANTIL a comprar: ");
+                System.out.println("Ingrese la cantidad de entradas " + typeTicketThree + " a comprar: ");
                 amountProductThree = sc.nextInt();
-
-                System.out.println("========== DATOS DE LA COMPRA ===========");
-                System.out.println("La cantidad de boletas GENERAL es de: " + amountProductOne);
-                System.out.println("La cantidad de boletas VIP es de: " + amountProductTwo);
-                System.out.println("La cantidad de boletas INFANTIL es de: " + amountProductThree);
-                System.out.println("El total de compra de las entradas es de: " + totalToPay);
             }
         } while (option != 0);
 
+        totalToPay = (amountProductOne * priceTicketOne) + (amountProductTwo * priceTicketTwo) + (amountProductThree * priceTicketThree);
 
+        System.out.println("========== DATOS DE LA COMPRA ===========");
+        System.out.println("La cantidad de boletas GENERAL es de: " + amountProductOne);
+        System.out.println("La cantidad de boletas VIP es de: " + amountProductTwo);
+        System.out.println("La cantidad de boletas INFANTIL es de: " + amountProductThree);
+        System.out.println("El total de compra de las entradas es de: " + totalToPay);
     }
 }
