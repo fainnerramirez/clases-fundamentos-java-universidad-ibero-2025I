@@ -30,35 +30,41 @@ public class Ejericicio1 {
 
         do {
             //creando los productos
-            System.out.println("Antes de comenzar agregemos los productos");
-            System.out.println("Ingrese el producto numero 1: ");
-            productOne = sc.nextLine();
-            System.out.println("Ingrese el producto numero 2: ");
-            productTwo = sc.nextLine();
-            System.out.println("Ingrese el producto numero 3: ");
-            productThree = sc.nextLine();
 
-            //solicitando las cantidades
-            System.out.println("1. Ingrese la cantidad a comprar del producto " + productOne + ": ");
-            amountProductOne = sc.nextInt();
-            System.out.println("2. Ingrese la cantidad a comprar del producto " + productTwo + ": ");
-            amountProductTwo = sc.nextInt();
-            System.out.println("3. Ingrese la cantidad a comprar del producto " + productThree + ": ");
-            amountProductThree = sc.nextInt();
+            System.out.println("1. Ingresar Productos");
+            System.out.println("2. Comprar Productos");
             System.out.println("0. Salir");
+            option = sc.nextInt();
+            sc.nextLine();
 
-            totalToPay = (priceOne * amountProductOne) + (priceTwo * amountProductTwo) + (priceThree * amountProductThree);
+            if (option == 1) {
+                System.out.println("Ingrese el producto numero 1: ");
+                productOne = sc.nextLine();
+                System.out.println("Ingrese el producto numero 2: ");
+                productTwo = sc.nextLine();
+                System.out.println("Ingrese el producto numero 3: ");
+                productThree = sc.nextLine();
+            } else if (option == 2) {
+                //solicitando las cantidades
+                System.out.println("1. Ingrese la cantidad a comprar del producto " + productOne + ": ");
+                amountProductOne = sc.nextInt();
+                System.out.println("2. Ingrese la cantidad a comprar del producto " + productTwo + ": ");
+                amountProductTwo = sc.nextInt();
+                System.out.println("3. Ingrese la cantidad a comprar del producto " + productThree + ": ");
+                amountProductThree = sc.nextInt();
+            } else if (option == 0) {
+                totalToPay = (priceOne * amountProductOne) + (priceTwo * amountProductTwo) + (priceThree * amountProductThree);
 
-            if(totalToPay > valueExceeded) {
-                totalToPay = totalToPay - (totalToPay * discount);
-                System.out.println("Se aplicó un descuento a la compra de: " + (totalToPay * discount));
+                if (totalToPay > valueExceeded) {
+                    totalToPay = totalToPay - (totalToPay * discount);
+                    System.out.println("Se aplicó un descuento a la compra de: " + (totalToPay * discount));
+                }
+
+                System.out.println("La cantidad del producto " + productOne + " fue de: " + amountProductOne);
+                System.out.println("La cantidad del producto " + productTwo + " fue de: " + amountProductTwo);
+                System.out.println("La cantidad del producto " + productThree + " fue de: " + amountProductThree);
+                System.out.println("El total a pagar es: " + totalToPay);
             }
-
-            System.out.println("La cantidad del producto " + productOne + " fue de: " + amountProductOne);
-            System.out.println("La cantidad del producto " + productTwo + " fue de: " + amountProductTwo);
-            System.out.println("La cantidad del producto " + productThree + " fue de: " + amountProductThree);
-            System.out.println("El total a pagar es: " + totalToPay);
-        
         } while (option != 0);
     }
 }
