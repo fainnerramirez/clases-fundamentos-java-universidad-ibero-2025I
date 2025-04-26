@@ -3,3 +3,4 @@
 - Recopilación de ejercicios hechos en clases y actividades propuestas para entregar al final del semestre.
 
 - Est. Fainner Ramirez 
+- Correo Institucional: framir28@estudiante.ibero.edu.co

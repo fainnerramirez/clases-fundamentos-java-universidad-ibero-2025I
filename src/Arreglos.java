@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Arreglos {
     //arreglos en java
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int nElements;
         nElements = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de elementos que tendrá el arreglo: "));
