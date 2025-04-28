@@ -9,7 +9,7 @@ public class Arreglos {
         int nElements;
         nElements = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de elementos que tendrá el arreglo: "));
         char[] letters = new char[nElements];
-
+        //element foreach
         for (int i=0; i < nElements; i++){
             System.out.println("Ingrese la posición del elemento " + (i +1) + ": ");
             letters[i] = sc.next().charAt(0);
